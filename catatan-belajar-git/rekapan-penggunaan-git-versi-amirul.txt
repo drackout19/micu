@@ -10,6 +10,16 @@
 	   lakukan perintah git add, git commit, 
 	   lalu git push -u origin [branch]. Selamat git antara web dan lokal sudah sinkron.
 
+	   studi kasus kali ini branch main ingin di merge/digabungkan dengan branch customer, karena misal pada branch master ini tuh sudah selesai,
+	   jadi branch main nya biar bisa uptodate gitu :
+
+	- masuk dulu ke branch main :
+		git switch main
+	- lalu git merge
+		git merge customer
+	
+	- Untuk sinkronisasi antar lokal dengan git web nya kita perlu git push
+		git push -u origin main
    pull = pull biasanya ini di lakukan pada git lokal komputer kita, study kasus penggunaan dari git pull, misal ada sebuah branch main yg mana 	  	  branch tersebut sudah uptodate lalu disisi lain ada branch customer yang mana branch ini pengen sinkron sama branch main oleh karena itu bisa 	  gunakan git pull ini untuk sinkronisasi antara branch main dan customer, tapi awas! sebelum melakukan git pull pada branch customer ini pastikan   	  bahwa commit lokal sudah di push ke branch customer itu sendiri biar tidak terjadi bentrok.
 	
 	studi kasus kali ini branch master ingin pull/ambil data uptodate dari branch main :
@@ -19,4 +29,22 @@
 	- lalu git pull
 		git pull origin main
 
+3. Langkah langkah push dari git lokal ke git web
+	- git add .
+	- git commit -m ""\
+	- git push -u origin [nama_branch] -> kalo mau aman tambahin -u origin [nama_branch] aja si kata gue
+
+4. Studi kasus jika ada sebuah projek yg belum terhubung sama sekali dengan web di github nya lalu kita mencoba ingin
+   upload projek kita dari lokal ke web git nya bisa lakukan cara ini :
+
+	- Ambil contoh kasus nama projek nya aplikasi-micu
+	- Masuk dulu ke folder aplikasi-micu
+	- lalu buka terminal, pastika route terminal nya di hubungkan ke folder aplikasi-micu
+	- selanjutnya ketikan perintah :
+		- git init
+		- git remote add origin https://github.com/yourusername/your-repo-name.git
+		- git add .
+		- git commit -m ""
+		- git push -u origin main -> catatan sebenernya bisa main atau master untuk nama branch nya
+	
 	
