@@ -1,0 +1,22 @@
+1. Cara ganti email dan username pada git lokal komputer kita caranya :
+
+   - git config --global user.email "amirulmukminin535@gmail.com"
+   - git config --global user.name "drackout19"
+
+2. Penggunaan merge dan pull itu hampir sama
+   merge = hanya sekedar menggabungkan 2 branch, hal ini bisa dilakukan
+	   pada web github nya langsung atau pada lokal komputer kita sendiri
+	   namun jika kita melakukan merge pada lokal komputer kita untuk sinkronisasi pada web github nya kita selanjutnya kita perlu
+	   lakukan perintah git add, git commit, 
+	   lalu git push -u origin [branch]. Selamat git antara web dan lokal sudah sinkron.
+
+   pull = pull biasanya ini di lakukan pada git lokal komputer kita, study kasus penggunaan dari git pull, misal ada sebuah branch main yg mana 	  	  branch tersebut sudah uptodate lalu disisi lain ada branch customer yang mana branch ini pengen sinkron sama branch main oleh karena itu bisa 	  gunakan git pull ini untuk sinkronisasi antara branch main dan customer, tapi awas! sebelum melakukan git pull pada branch customer ini pastikan   	  bahwa commit lokal sudah di push ke branch customer itu sendiri biar tidak terjadi bentrok.
+	
+	studi kasus kali ini branch master ingin pull/ambil data uptodate dari branch main :
+
+	- masuk dulu ke branch customer :
+		git switch customer
+	- lalu git pull
+		git pull origin main
+
+	
