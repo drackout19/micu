@@ -1,7 +1,15 @@
 Ini file 1
 
+
 ini di tulis halaman sebelum login
 
 amirul
 amirul
 amirul
+
+
+checkout 2
+
+checkout 1
+
+>>>>>>> f897c314ccbe49ff6c89bac68bf3ae7a630e6f42
