@@ -28,6 +28,9 @@
 		git switch customer
 	- lalu git pull
 		git pull origin main
+	
+	Jika kita ingin pull dari branch lain pastikan bahwa branch yg sedang kita berada ini tidak boleh status nya uncommited/belum di commit
+	karena hal ini git tidak mengijinkan, oleh karena itu jika ada file yg uncommited kita harus push dulu ke branch kita saat ini.
 
 3. Langkah langkah push dari git lokal ke git web
 	- git add .
@@ -47,4 +50,23 @@
 		- git commit -m ""
 		- git push -u origin main -> catatan sebenernya bisa main atau master untuk nama branch nya
 	
+5. Penggunaan git stash
+	studi kasusny gini, misal projek saya ada dua branch yaitu branch main dan customer, lalu di projek lokal tentunya saya masuk di branch customernya
+	lalu di peojek lokal tersebut tentu saya membuat file baru ataupun file yg sedang di edit, lalu tiba tiba ada sebuah kendala yang mana di projek
+	lokal saya harus pindah branch ke main (git switch main) tentu nya saya tidak di ijinkan pindah begitu saja karena selama ini pada branch customer 	didalemnya file baru yg dibuat dan di edit tersebut belum saya commit karena saya masih ragu dan tidak mau commit terhadap file tersebut, lantas 	gimana solusinya? solusinya yaa ada dua pertama bisa kita git commit dlu file file tersebut atau kita manfaatkan perintah git stash!
+	git stash itu sendiri berfungsi untuk mengangkat file file yg uncomitted sehingga ketika kita mau pindah branch ke main contoh nya pada kasus kali 	ini tentu di ijinkan oleh git nya
 	
+	perintah : -git stash
+	perintah tambahan : -git stash -m "pesan" -> sangat di anjurkan untuk mau stash kita beri pesannya biar enak
+
+	Ceritanya sekarang lagi berada di branch main, lalu saya ingin balik lagi ke branch customer dengan tujuan saya ingin melanjutkan 	progress pekerjaan
+	saya terhadap file file yg sudah di stash tersebut, oleh karena itu saya harus mengembalikkan file file tersebut yang sudah di stash
+
+	perintah nya : -git stash pop
+
+	untuk melihat daftar stash 
+	perintah : -git stash list
+	
+	Tentu dalam stash tentunya kita pasti punya banyak stash dan kita ingin kembali ke stash tertentu kita bisa gunakan
+	perintah ini : git stash --index n -> n itu angka mau index keberapa
+
